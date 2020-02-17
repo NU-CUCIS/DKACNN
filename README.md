@@ -14,17 +14,17 @@ To use this software, what the algorithm requires as input are a numpy array. Fo
 
 ## Files ##
 1. `homogenization.py`: The CNN has two branches where one branch takes the original 3D microstructure image as input and the other brach takes the corresponding two-point autocorrelation as input. Finally the two branches are concatenated togetogher to make the final prediction for effective elastic stiffness. After training, the trained model will be saved in 'my_model.h5' file.
-2. `crystalPlasticity.py`: The CNN has two branches where one branch takes the original 2D microstructure image as input and the other brach takes the corresponding two-point autocorrelation as input. Finally the two branches are concatenated togetogher to make the final prediction for initial deformation level. After training, the trained model will be saved in 'my_model.h5' file.
+2. `crystalPlasticity.py`: The CNN has two branches where one branch takes the original 2D microstructure image as input and the other brach takes the corresponding two-point autocorrelation as input. Finally the two branches are concatenated togetogher to make the final prediction for initial deformation level. After training, the trained model will be saved in 'my_model.hdf5' file.
 3. `homogenization_data.pkl`: Example data for homogenization dataset, includeing 10 51x51x51 3D microstrctures.
 4. `crystal_plasticity_data.pkl`: Example data for crystal plasticity dataset, including 10 224x224 strain profiles.
 
 
 ## How to run it
-1. Run commend below, which trains the CNN model for homogenization dataset and save the trained model in 'my_model.h5' file.
+1. Run commend below, which trains the CNN model for homogenization dataset and save the trained model in 'my_model.hdf5' file.
    ```
    python homogenization.py
    ```
-2. Run commend below, which trains the CNN model for crystal plasticity dataset and save the trained model in 'my_model.h5' file.
+2. Run commend below, which trains the CNN model for crystal plasticity dataset and save the trained model in 'my_model.hdf5' file.
    ```
    python crystalPlasticity.py
    ```
