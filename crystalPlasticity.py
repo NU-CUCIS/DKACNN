@@ -98,5 +98,5 @@ model = Model(input = [model_img.input, model_cor.input], output = prediction)
 model.compile(loss = "categorical_crossentropy", optimizer='adam', metrics=["accuracy"])
 filepath = './my_model.hdf5'
 early_stopping = EarlyStopping(monitor='val_loss', patience=10)
-checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True)
+checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_best_only=True)
 history = model.fit([train_data, cor_data], train_label, batch_size=2, nb_epoch=10, validation_split=0.2, callbacks=[early_stopping, checkpoint])
